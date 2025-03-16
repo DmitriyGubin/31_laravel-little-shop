@@ -1,0 +1,426 @@
+@mixin font_func($size, $weight, $line_height, $color) 
+{
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line_height;
+	color: $color;
+}
+
+@font-face 
+{ 
+    font-family: "PTRootUIMedium";
+    src: url("../../fonts/PTRootUIMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face 
+{ 
+    font-family: "Unbounded";
+    src: url("../../fonts/Unbounded.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/********общее*****/
+body
+{
+    margin: 0px;
+	// padding-bottom: 1000px; 
+}
+
+section
+{
+	margin-top: 50px !important;
+}
+
+.prod_item
+{
+	border: 3px solid #f0631d;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.price,
+.price span
+{
+	@include font_func(18px, 700, 1.3, #2D2D2D);
+}
+
+.price span
+{
+	color: #f0631d;
+}
+
+.title
+{
+	text-align: center;
+	@include font_func(30px, 700, 1.3, #2D2D2D);
+	margin-bottom: 30px;
+	font-family: "Unbounded";
+}
+
+.wrap
+{
+	max-width: 1020px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.wain_wrapper
+{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.univ_inp
+{
+	height: 40px;
+	width: 200px;
+	border-radius: 10px;
+	border: 1px solid #f0631d;
+	padding: 0 20px;
+	@include font_func(16px, 300, 1.3, #2D2D2D);
+}
+
+.univ_inp::placeholder
+{
+	@include font_func(16px, 300, 1.3, gray);
+}
+
+.univ_button 
+{
+	height: 40px;
+	background-color: #f0631d;
+	padding: 0 20px;
+	@include font_func(16px, 300, 1.3,#fff);
+	border-radius: 50px;
+}
+
+*
+{
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+    font-family: PTRootUIMedium,sans-serif;
+	hyphens: auto;
+}
+
+h1,h2,h3,p
+{
+	margin: 0px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+button,input,textarea
+{
+	border: none;
+}
+
+input:focus
+{
+	outline: none;
+}
+
+button
+{
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover,
+button:hover
+{
+	opacity: 0.6;
+}
+
+/********общее*****/
+
+header
+{
+	background: #1f1f1f;
+	padding: 50px 0;
+	margin-bottom: 50px;
+
+	.log_out_form
+	{
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+	}
+
+	.menu
+	{
+		padding: 0px;
+		margin: 0px;
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		a
+		{
+			margin: 0 20px;
+			font-family: "Unbounded";
+			@include font_func(18px, 700, 1.3, #ffffff);
+		}
+
+		a.active
+		{
+			color: #f0631d;
+		}
+	}
+}
+
+footer
+{
+	background: #1f1f1f;
+	padding: 50px 0;
+	margin-top: 50px;
+
+	.title
+	{
+		color: white;
+		margin: 0px;
+	}
+}
+
+.catalog
+{
+
+.title_prod
+{
+	@include font_func(24px, 700, 1.3, #2D2D2D);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.form_box
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.marg
+{
+	margin: 10px;
+}
+
+.univ_button
+{
+	min-width: 190px;
+}
+
+.univ_button.black
+{
+	background: #2D2D2D;
+}
+
+}
+
+.make_order
+{
+
+.succes
+{
+	text-align: center;
+	@include font_func(24px, 700, 1.3, #f0631d);
+}
+
+.quant_price
+{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	button
+	{
+		margin-left: 10px;
+	}
+}
+
+.title_prod
+{
+	margin-right: 20px;
+	@include font_func(24px, 700, 1.3, #2D2D2D);
+}
+
+.prod_item
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.total_butt
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.price.total
+{
+	margin: 0 20px;
+}
+
+}
+
+.orders
+{
+
+.title_order
+{
+	@include font_func(24px, 700, 1.3, #2D2D2D);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.name_prods
+{
+	margin-bottom: 10px;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.delete_butt
+{
+	display: block;
+	margin: 20px auto 0 auto;
+}
+
+}
+
+.authh
+{
+
+.auth_box
+{
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 0px 20px 2px #f2f2f2;
+}
+
+.error
+{
+	@include font_func(14px, 300, 1.3, red);
+	text-align: center;
+	margin-top: 10px;
+}
+
+.auth_title
+{
+	@include font_func(24px, 700, 1.3, #2D2D2D);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.univ_inp
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.univ_button
+{
+	width: 100%;
+}
+
+
+}
+
+/********пагинация******/
+span.prev_next
+{
+	@include font_func(18px, 600, 1.2, black);
+}
+
+a.prev_next
+{
+	@include font_func(18px, 600, 1.2, blue);
+}
+
+svg.pag_arrow
+{
+	margin-top: 4px;
+	width: 30px;
+}
+
+.rounded-md.arrows_nums
+{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+
+.page_itemm
+{
+	width: 30px;
+	height: 30px;
+	background-color: #f0631d;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+}
+
+.page_itemm, .page_itemm *
+{
+	@include font_func(18px, 600, 1.2, white);
+}
+
+span.page_itemm
+{
+	background-color: #1f1f1f;
+}
+
+span.page_itemm *
+{
+	color: #F0FFF0;
+}
+
+.rounded-md.arrows_nums
+{
+	display: flex;
+	justify-content: center;
+}
+
+/********пагинация******/
+
+@media screen and (max-width: 750px)
+{
+	.catalog .univ_inp,
+	.catalog .univ_button,
+	.make_order .quant_price button
+	{
+		width: 100%;
+	}
+
+	.make_order #make_order
+	{
+		width: 100%;
+	}
+}
+
+
+
+
